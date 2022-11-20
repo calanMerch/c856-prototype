@@ -4,7 +4,7 @@
     <v-sheet
       id="site-content"
       style="overflow-y: scroll"
-      max-height="1200"
+      max-height="800"
       dark>
         <router-view/>
     </v-sheet>
@@ -12,7 +12,8 @@
     dark
     padless
     absolute
-    style="margin-bottom: 20px"
+    bottom
+    style="margin-bottom: 5px"
     >
     <v-card
       class="flex"
@@ -47,13 +48,13 @@
   </v-app>
 </template>
 
-<style>
+<!--<style>
 
   html {
     overflow-y: hidden;
   }
 
-</style>
+</style>-->
 
 <script>
 import NavBar from '@/components/NavBar'

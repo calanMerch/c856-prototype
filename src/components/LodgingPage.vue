@@ -1,5 +1,5 @@
 <template>
-<div style="height: 800px; overflow-y: scroll">
+<div style="height: 800px; overflow-y: auto">
     <v-row>
       <v-col cols="12">
         <div class="font-weight-bold font-italic" style="margin-top: 10px; text-align: center">

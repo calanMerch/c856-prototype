@@ -1,11 +1,16 @@
 <template>
     <v-app-bar
       prominent
-      dark
       shrink-on-scroll
+      dark
       src="@/assets/splash.jpg"
       scroll-target="#site-content"
     >
+    <!-- <template v-slot:img="{ props }">
+      <v-img
+        v-bind="props"
+      ></v-img>
+    </template> -->
     <v-toolbar-title class="text-lg-h4 text-md-body-1 text-xs-caption font-weight-bold">Taniti Island</v-toolbar-title>
     <template v-slot:extension>
         <v-tabs centered>
@@ -25,6 +30,7 @@
                 sightseeing
             </v-btn>
         </v-tabs>
+
     </template>
 
 
@@ -63,6 +69,17 @@ import { mdiTwitter,mdiFacebook,mdiInstagram } from '@mdi/js';
   export default {
     name: 'NavBar',
     computed: {
+      height () {
+        console.log(this.$vuetify.breakpoint.name)
+        switch (this.$vuetify.breakpoint.name) {
+          case 'xs': return true
+          case 'sm': return true
+          case 'md': return true
+          case 'lg': return false
+          case 'xl': return false
+          default: return true
+        }
+      },
       isHomeScreen() {
         if (this.$route.path === '/'){
           return true
